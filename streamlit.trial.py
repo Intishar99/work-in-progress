@@ -9,7 +9,7 @@ def process_file(uploaded_file):
     data = pd.read_csv(uploaded_file)
 
     # Specify your topic columns
-    topic_columns = ['Motion - Homework', 'Units - Recap Quiz',
+    topic_columns =  ['Motion - Homework', 'Units - Recap Quiz',
        'Units and Prefixes - Grade 9 - Quiz', 'Measurements Homework ',
        'Displacement - Construction ', 'Measurements - Cambridge Grade 9',
        'Motion Equations and Graphs', 'Hookes Law - Graph',
@@ -19,12 +19,12 @@ def process_file(uploaded_file):
        'Electrical Quantities Exam', 'Mock 1 - P4', 
      'Mock 2 - P4' ]
 
-data['Id '] = data['Id '].astype(str)
-data.rename(columns={'Id ': 'Id'}, inplace=True)
-transactional_data = []
-for index, row in data.iterrows():
-    # Get the student ID or any unique identifier
-    student_id = row['Id']
+    # Your existing code for generating frequent itemsets
+    data['Id '] = data['Id '].astype(str)
+    data.rename(columns={'Id ': 'Id'}, inplace=True)
+    transactional_data = []
+    for index, row in data.iterrows():
+        student_id = row['Id ']
         for topic_column in topic_columns:
             topic = topic_column.replace('topic', '')
             mark = row[topic_column]
@@ -58,4 +58,3 @@ def main():
 # Run the Streamlit app
 if __name__ == "__main__":
     main()
-
