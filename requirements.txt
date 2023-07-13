@@ -1,4 +1,4 @@
 streamlit==0.89.0
 pandas==1.4.0
 mlxtend==0.18.0
-pyarrow==4.0.0
+pyarrow==5.0.0
