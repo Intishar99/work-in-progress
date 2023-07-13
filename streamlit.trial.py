@@ -24,7 +24,7 @@ def process_file(uploaded_file):
     data.rename(columns={'Id ': 'Id'}, inplace=True)
     transactional_data = []
     for index, row in data.iterrows():
-        student_id = row['Id ']
+        student_id = row['Id']
         for topic_column in topic_columns:
             topic = topic_column.replace('topic', '')
             mark = row[topic_column]
