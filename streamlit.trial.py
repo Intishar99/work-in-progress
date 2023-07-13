@@ -3,7 +3,7 @@ import pandas as pd
 from mlxtend.preprocessing import TransactionEncoder
 from mlxtend.frequent_patterns import fpgrowth
 
- Function to process the uploaded file and generate frequent itemsets
+# Function to process the uploaded file and generate frequent itemsets
 def process_file(uploaded_file):
     # Read the uploaded file as a pandas DataFrame
     data = pd.read_csv(uploaded_file)
