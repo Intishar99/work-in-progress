@@ -37,6 +37,8 @@ def process_file(uploaded_file):
     te_ary = te.fit(transactions).transform(transactions)
     df = pd.DataFrame(te_ary, columns=te.columns_)
     frequent_itemsets = fpgrowth(df, min_support=0.5, use_colnames=True)
+    frequent_itemsets['itemsets'] = frequent_itemsets['itemsets'].astype(str)
+
     
     return frequent_itemsets
 
