@@ -19,10 +19,12 @@ def process_file(uploaded_file):
        'Electrical Quantities Exam', 'Mock 1 - P4', 
      'Mock 2 - P4' ]
 
-    # Your existing code for generating frequent itemsets
-    transactional_data = []
-    for index, row in data.iterrows():
-        student_id = row['Id ']
+data['Id '] = data['Id '].astype(str)
+data.rename(columns={'Id ': 'Id'}, inplace=True)
+transactional_data = []
+for index, row in data.iterrows():
+    # Get the student ID or any unique identifier
+    student_id = row['Id']
         for topic_column in topic_columns:
             topic = topic_column.replace('topic', '')
             mark = row[topic_column]
