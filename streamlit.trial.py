@@ -9,7 +9,15 @@ def process_file(uploaded_file):
     data = pd.read_csv(uploaded_file)
 
     # Specify your topic columns
-    topic_columns = ['Motion - Homework', 'Units - Recap Quiz', ...]
+    topic_columns = ['Motion - Homework', 'Units - Recap Quiz',
+       'Units and Prefixes - Grade 9 - Quiz', 'Measurements Homework ',
+       'Displacement - Construction ', 'Measurements - Cambridge Grade 9',
+       'Motion Equations and Graphs', 'Hookes Law - Graph',
+       'Motion Equations and Graphs - Exam', 'Moments - Worksheet',
+       'Forces and Moments - Cambridge', 'Thermal Physics Assignment',
+       'Sound and Electromagnetism', 'Static Electricity - Grade 10 Cambridge',
+       'Electrical Quantities Exam', 'Mock 1 - P4', 
+     'Mock 2 - P4' ]
 
     # Your existing code for generating frequent itemsets
     transactional_data = []
