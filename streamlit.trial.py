@@ -41,8 +41,8 @@ def process_file(uploaded_file):
     frequent_itemsets_filtered = frequent_itemsets[frequent_itemsets['itemsets'].apply(lambda x: len(x) >= 2)]
 
 
-    
-    return frequent_itemsets
+    return frequent_itemsets_filtered
+    #return frequent_itemsets
 
 # Create Streamlit app
 def main():
