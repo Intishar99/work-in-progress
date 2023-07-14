@@ -38,6 +38,8 @@ def process_file(uploaded_file):
     df = pd.DataFrame(te_ary, columns=te.columns_)
     frequent_itemsets = fpgrowth(df, min_support=0.5, use_colnames=True)
     frequent_itemsets['itemsets'] = frequent_itemsets['itemsets'].astype(str)
+    frequent_itemsets_filtered = frequent_itemsets[frequent_itemsets['itemsets'].apply(lambda x: len(x) >= 2)]
+
 
     
     return frequent_itemsets
