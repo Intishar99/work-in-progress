@@ -18,8 +18,9 @@ def process_file(uploaded_file):
                      'Sound and Electromagnetism', 'Static Electricity - Grade 10 Cambridge',
                      'Electrical Quantities Exam', 'Mock 1 - P4', 'Mock 2 - P4']
 
-    # Your existing code for generating frequent itemsets
-    data['Id'] = data['Id'].astype(str)
+# Your existing code for generating frequent itemsets
+    data['Id '] = data['Id '].astype(str)
+    data.rename(columns={'Id ': 'Id'}, inplace=True)
     transactional_data = []
     for index, row in data.iterrows():
         student_id = row['Id']
@@ -28,7 +29,6 @@ def process_file(uploaded_file):
             mark = row[topic_column]
             if mark < 60:
                 transactional_data.append((student_id, topic))
-
     transactional_df = pd.DataFrame(transactional_data, columns=['student_id', 'topic'])
     transactions = transactional_df.groupby('student_id')['topic'].apply(list).tolist()
     te = TransactionEncoder()
