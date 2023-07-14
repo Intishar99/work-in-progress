@@ -4,7 +4,7 @@ def main():
     st.title("Student Dashboard")
     
     # Student's name
-    student_name = st.text_input("Enter student's name")
+    st.header("Student Name: Student")
     
     # Student picture
     student_picture = st.image("placeholder_image.jpg", caption="Student Picture")
