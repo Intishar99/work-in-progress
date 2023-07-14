@@ -11,10 +11,12 @@ def main():
     
     # List of subjects and marks
     subjects = ['Math', 'Science', 'English']
-    marks = []
-    for subject in subjects:
-        mark = st.number_input(f"Enter mark for {subject}", min_value=0, max_value=100, value=0)
-        marks.append(mark)
+    marks = [55, 85, 48]  # Hardcoded marks
+    
+    # Display subject marks
+    st.subheader("Subject Marks")
+    for i, subject in enumerate(subjects):
+        st.write(f"{subject}: {marks[i]}")
     
     # Revise button
     if st.button("Revise"):
