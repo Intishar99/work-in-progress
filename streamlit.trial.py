@@ -57,7 +57,8 @@ def main():
         
         # Display images
         st.subheader("visualized")
-        st.image("image1.jpg", caption="Student Picture")
+        st.image("image1.jpg", caption="Marks with Measurements Homework above threshold")
+        st.image("image2.jpg", caption="Marks with both below threshold")
        
        
 # Run the Streamlit app
