@@ -57,8 +57,8 @@ def main():
         
         # Display images
         st.subheader("Images")
-        st.image("image1.png", caption="Cluster with marks above 60")
-        st.image("image2.png", caption="Cluster with marks blow 60")
+        st.image("placeholder_image.jpg", caption="Student Picture")
+       
        
 # Run the Streamlit app
 if __name__ == "__main__":
