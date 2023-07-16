@@ -18,7 +18,7 @@ def process_file(uploaded_file):
                      'Sound and Electromagnetism', 'Static Electricity - Grade 10 Cambridge',
                      'Electrical Quantities Exam', 'Mock 1 - P4', 'Mock 2 - P4']
 
-# Your existing code for generating frequent itemsets
+    # Your existing code for generating frequent itemsets
     data['Id '] = data['Id '].astype(str)
     data.rename(columns={'Id ': 'Id'}, inplace=True)
     transactional_data = []
@@ -54,7 +54,12 @@ def main():
         # Display the frequent itemsets
         st.subheader("Frequent Itemsets")
         st.write(frequent_itemsets)
-
+        
+        # Display images
+        st.subheader("Images")
+        st.image("images/image1.jpg", caption="Cluster with marks above 60")
+        st.image("images/image2.jpg", caption="Cluster with marks blow 60")
+       
 # Run the Streamlit app
 if __name__ == "__main__":
     main()
