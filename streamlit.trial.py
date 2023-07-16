@@ -56,8 +56,8 @@ def main():
         st.write(frequent_itemsets)
         
         # Display images
-        st.subheader("Images")
-        st.image("placeholder_image.jpg", caption="Student Picture")
+        st.subheader("visualized")
+        st.image("image1.jpg", caption="Student Picture")
        
        
 # Run the Streamlit app
